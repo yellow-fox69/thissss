@@ -1,0 +1,29 @@
+#case1:
+
+import pandas as pd
+
+import plotly.express as px
+
+dollar_conv = pd.read_csv('CUR_DLR_INR.csv')
+
+fig = px.line(dollar_conv, x='DATE', y='RATE', title='Dollar 
+
+vs Rupee')
+
+fig.show()
+
+#case2:
+
+import pandas as pd
+
+import plotly.express as px
+
+runs_scored = pd.read_csv('AusVsInd.csv')
+
+fig = px.line(runs_scored, x='Overs', y=['AUS', 'IND'], markers=True)
+
+fig.update_layout(title='Australia vs India ODI Match', xaxis_title='OVERS', 
+
+yaxis_title='RUNS', legend_title='Country')
+
+fig.show()
